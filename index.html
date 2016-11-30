@@ -15,7 +15,7 @@
 
 <h3> You have {{todosCtrl.all.length}} Todos left </h3>
 
-<form ng-submit="todosCtrl.addTodo()">
+<form ng-submit="todosCtrl.add()">
   <label class="sr-only" for="todosCtrl.newTodo.todo">Todo</label>
   <input class="form-control" type="text" placeholder="Todo" ng-model="todosCtrl.newTodo.todo">
   <label class="sr-only" for="todosCtrl.newTodo.image">Image</label>
@@ -23,7 +23,7 @@
   <label class="sr-only" for="todosCtrl.newTodo.done">Done</label>
   <input class="form-control" type="text" placeholder="Todo" ng-model="todosCtrl.newTodo.done">
   <label class="sr-only" for="todosCtrl.newTodo">Submit</label>
-			<input class="btn btn-default" type="submit"/>
+	<input class="btn btn-default" type="submit"/>
 </form>
 
 

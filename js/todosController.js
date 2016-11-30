@@ -10,12 +10,8 @@
     self.all = [{ todo: "Get paid", image: "xx", done: false }]
 
     function addTodo () {
-
-
       self.all.push(self.newTodo)
       self.newTodo = { todo: "", image: "", done: false }
-
-
     }
 
 
