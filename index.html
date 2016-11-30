@@ -7,23 +7,23 @@
 
 
 <h2>My Todo List</h2>
-<div ng-controller="TodosController as todosCtrl">
+<div ng-controller="TodosController">
 
-<h3> You have {{todosCtrl.all.length}} Todos left </h3>
+<h3> You have {{all.length}} Todos left </h3>
 
-<form ng-submit="todosCtrl.add()">
-  <label class="sr-only" for="todosCtrl.newTodo.todo">Todo</label>
-  <input class="form-control" type="text" placeholder="Todo" ng-model="todosCtrl.newTodo.todo">
-  <label class="sr-only" for="todosCtrl.newTodo.image">Image</label>
-  <input class="form-control" type="text" placeholder="Image" ng-model="todosCtrl.newTodo.image">
-  <label class="sr-only" for="todosCtrl.newTodo.done">Done</label>
-  <input class="form-control" type="text" placeholder="Todo" ng-model="todosCtrl.newTodo.done">
-  <label class="sr-only" for="todosCtrl.newTodo">Submit</label>
+<form ng-submit="add()">
+  <label class="sr-only" for="newTodo.todo">Todo</label>
+  <input class="form-control" type="text" placeholder="Todo" ng-model="newTodo.todo">
+  <label class="sr-only" for="newTodo.image">Image</label>
+  <input class="form-control" type="text" placeholder="Image" ng-model="newTodo.image">
+  <label class="sr-only" for="newTodo.done">Done</label>
+  <input class="form-control" type="text" placeholder="Todo" ng-model="newTodo.done">
+  <label class="sr-only" for="newTodo">Submit</label>
 	<input class="btn btn-default" type="submit"/>
 </form>
 
 
-<div ng-repeat="todo in todosCtrl.all">
+<div ng-repeat="todo in all">
   <span>{{todo.todo}} {{todo.image}} {{todo.done}}</span>
 
 

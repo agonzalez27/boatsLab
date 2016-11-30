@@ -3,14 +3,16 @@
   angular.module('todosApp')
   .controller('TodosController', TodosController)
 
-  function TodosController ($scope) {
-    self.add = addTodo;
-    self.newTodo = { todo: "", image: "", done: false }
-    self.all = [{ todo: "Get paid", image: "xx", done: false }]
+  function TodosController ($scope, $log) {
+    $scope.add = addTodo;
+    $scope.newTodo = { todo: "", image: "", done: false }
+    $scope.all = [{ todo: "Get paid", image: "xx", done: false }]
+
+    $log.log($scope.all)
 
     function addTodo () {
-      self.all.push(self.newTodo)
-      self.newTodo = { todo: "", image: "", done: false }
+      $scope.all.push($scope.newTodo)
+      $scope.newTodo = { todo: "", image: "", done: false }
     }
 
 
