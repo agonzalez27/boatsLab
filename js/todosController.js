@@ -3,8 +3,7 @@
   angular.module('todosApp')
   .controller('TodosController', TodosController)
 
-  function TodosController () {
-    var self = this;
+  function TodosController ($scope) {
     self.add = addTodo;
     self.newTodo = { todo: "", image: "", done: false }
     self.all = [{ todo: "Get paid", image: "xx", done: false }]
